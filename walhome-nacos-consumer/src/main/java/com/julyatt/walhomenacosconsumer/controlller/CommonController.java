@@ -1,5 +1,7 @@
 package com.julyatt.walhomenacosconsumer.controlller;
 
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.cloud.client.ServiceInstance;
@@ -15,6 +17,7 @@ import org.springframework.web.client.RestTemplate;
  */
 
 @RestController
+@Api(tags = "测试模块", description = "测试模块相关接口")
 public class CommonController {
 
     @Autowired
@@ -27,6 +30,7 @@ public class CommonController {
     private String appName;
 
     @GetMapping("echo/app-name")
+    @ApiOperation(value = "test api", notes = "test api 说明", httpMethod = "GET")
     public String echoAppName() {
         ServiceInstance serviceInstance = loadBalancerClient.choose("nacos-provider");
         String path = String.format("http://%s:%s/echo/%s", serviceInstance.getHost(), serviceInstance.getPort(), appName);

@@ -11,6 +11,8 @@ public class WalhomeNacosConfigApplication {
 
     public static void main(String[] args) {
         ConfigurableApplicationContext applicationContext = SpringApplication.run(WalhomeNacosConfigApplication.class, args);
+        String nacos = applicationContext.getEnvironment().getProperty("nacos");
+        System.out.println("test-config" + nacos);
     }
 
 }
