@@ -17,7 +17,7 @@
         <spring-cloud-alibaba.version>2.2.0.RELEASE</spring-cloud-alibaba.version>
         <!--swagger-->
         <swagger2markup.version>1.3.1</swagger2markup.version>
-        <swagger.springfox.version>2.9.2</swagger.springfox.version>
+        <swagger.springfox.version>2.10.0</swagger.springfox.version>
         <swagger.model.version>1.5.21</swagger.model.version>
         <asciidoctor.version>1.5.6</asciidoctor.version>
         <generated.source.directory>src/docs/asciidoc/generated</generated.source.directory>
